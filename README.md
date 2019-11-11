@@ -1,7 +1,7 @@
 # Cordova plugin - OTP using SMS Retriever API
 ## Presentation
 
-This plugin SMS Retriever API, you can perform SMS-based user verification in your Android app automatically, without requiring the user to manually type verification codes, and without requiring any extra app permissions.
+This plugin uses the [Google SMS Retriever API](https://developers.google.com/identity/sms-retriever/overview), so can perform SMS-based user verification in your Android app automatically, without requiring the user to manually type verification codes, and without requiring any extra app permissions.
 
 ## Features
 - Generate hash key
@@ -18,11 +18,11 @@ cordova plugin add https://github.com/Paulimjr/sms-retriever-plugin.git
 
 ### Namespace and API
 
-All the functions described in this plugin reside in the `cordova.plugins.SmsRetrieverPlugin` namespace.
+All functions described in this plugin reside in the `cordova.plugins.SmsRetrieverPlugin` namespace.
 
 1 - First, you need to generate a hash key and put in your SMS Server; 
 
-2 - Start the listener onDeviceReady method in your application.
+2 - In the onDeviceReady listener call the startSmsListener.
 
 ```javascript
  
@@ -52,4 +52,4 @@ document.addEventListener("deviceready", function(){
 )
 ```
 
-Please note that **You need to generate a hash key and put in fill in your SMS server as specified at Android Documentation** https://developers.google.com/identity/sms-retriever/verify
+Please note that **You need to generate a hash key and add it to your SMS server as specified at Android Documentation** https://developers.google.com/identity/sms-retriever/verify
